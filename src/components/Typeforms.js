@@ -1,31 +1,58 @@
-import { DropdownButton, MenuItem, ButtonToolbar } from 'react-bootstrap';
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+// import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+let inputField = null;
 
-const BUTTONS = ['Default', 'Primary', 'Success', 'Info', 'Warning', 'Danger'];
-function Typeforms(props)
-{
-    
-    if(props.type == 1)
-    {
-        return(
-            // <DropdownButton title="check1" id = {1}>
-            //     <MenuItem>List 1</MenuItem>
-            //     <MenuItem>List 2</MenuItem>
-            //     <MenuItem>List 3</MenuItem> 
-            // </DropdownButton>
+export class Typeforms extends Component {
+  constructor(props) {
+     super(props);
+     this.checkType();
+     this.checkType = this.checkType.bind(this);
+  }
 
-            <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-        )
-    }
-    else
+  checkType()
+  {
+    if(this.props.type == 1)
     {
-        return (<div>Hello world</div>)
+      inputField = (
+        <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+       </select>
+      )
     }
+
+    else if(this.props.type == 2)
+    {
+      inputField = (
+      <select multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+      </select>
+      )
+    }
+
+    else{
+      inputField = (
+        <div>
+        <p>Hello workd</p>  
+        <input type = "text"/>
+        </div>
+      )
+    }
+  }
+  render() {
+    return (
+       <div>
+         {inputField}
+       </div>
+    )
+  }
 }
 
-export default Typeforms;
+export default Typeforms
+

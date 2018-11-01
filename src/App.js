@@ -7,11 +7,11 @@ import Typeforms from './components/Typeforms.js';
 
 class App extends Component {
   render() {
-    var l = 1;
+    var la = 3;
     console.log(formDetails.keys);
     return (
       <div className="App">
-        <Typeforms type = {l}/>
+        <Typeforms type = {la}/>
       </div>
     );
   }
