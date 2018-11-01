@@ -11,7 +11,10 @@ class App extends Component {
     console.log(formDetails.keys);
     return (
       <div className="App">
-        <Typeforms type = {la}/>
+      {formDetails.keys.map((val) => {
+        return (<Typeforms type = {+val.type}/>)
+      })}
+        
       </div>
     );
   }
