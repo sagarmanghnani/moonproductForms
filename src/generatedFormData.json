@@ -40,6 +40,13 @@
 			"key_id": 2,
 			"type": "2",
 			"value": "Sri Lanka"
+		},
+		{
+			"id": 7,
+			"key": "Colour",
+			"key_id": 2,
+			"type": "1",
+			"value": "Brown"
 		}
 	],
 	"code": 200,

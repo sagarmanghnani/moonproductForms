@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Dropdown from './Dropdown';
 import * as formData from '../generatedFormData.json';
+import Checkbox from './Checkbox';
 // import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 let inputField = null;
 
@@ -54,12 +55,7 @@ export class Typeforms extends Component {
     else if(this.props.type == 2)
     {
       inputField = (
-      <select multiple>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
-      </select>
+      <Checkbox dataSubmit = {this.checkbox}/>
       )
     }
 
