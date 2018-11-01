@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Dropdown from './Dropdown';
 import * as formData from '../generatedFormData.json';
 import Checkbox from './Checkbox';
-// import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 let inputField = null;
 
 export class Typeforms extends Component {
@@ -19,12 +18,10 @@ export class Typeforms extends Component {
   }
   filterData()
   {
-    // console.log(formData.infos[0].type);
     formData.infos.map((val) => {
       if(val.type == 1)
       {
         this.dropdown.push(val.value);
-        console.log(this.dropdown);
       }
       else if(val.type == 2)
       {
@@ -44,9 +41,9 @@ export class Typeforms extends Component {
   {
     if(this.props.type == 1)
     {
-      // console.log(formData);
       inputField = (
         <div>
+          <p>Country</p>
           <Dropdown dataSubmit = {this.dropdown}/>
         </div>
       )
@@ -55,15 +52,18 @@ export class Typeforms extends Component {
     else if(this.props.type == 2)
     {
       inputField = (
-      <Checkbox dataSubmit = {this.checkbox}/>
+        <div>
+          <p>Colors</p>
+          <Checkbox dataSubmit = {this.checkbox}/>
+      </div>
       )
     }
 
     else{
       inputField = (
-        <div>
-        <p>Hello workd</p>  
-        <input type = "text"/>
+        <div>  
+          <label>Description</label>
+         <textarea rows="4" cols = "30"/>
         </div>
       )
     }

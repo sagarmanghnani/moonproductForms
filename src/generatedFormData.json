@@ -3,49 +3,49 @@
 			"id": 1,
 			"key": "Colour",
 			"key_id": 1,
-			"type": "1",
+			"type": "2",
 			"value": "Red"
 		},
 		{
 			"id": 2,
 			"key": "Colour",
 			"key_id": 1,
-			"type": "1",
+			"type": "2",
 			"value": "Green"
 		},
 		{
 			"id": 3,
 			"key": "Colour",
 			"key_id": 1,
-			"type": "1",
+			"type": "2",
 			"value": "Blue"
 		},
 		{
 			"id": 4,
 			"key": "Country",
 			"key_id": 2,
-			"type": "2",
+			"type": "1",
 			"value": "India"
 		},
 		{
 			"id": 5,
 			"key": "Country",
 			"key_id": 2,
-			"type": "2",
+			"type": "1",
 			"value": "Singapore"
 		},
 		{
 			"id": 6,
 			"key": "Country",
 			"key_id": 2,
-			"type": "2",
+			"type": "1",
 			"value": "Sri Lanka"
 		},
 		{
 			"id": 7,
 			"key": "Colour",
 			"key_id": 2,
-			"type": "1",
+			"type": "2",
 			"value": "Brown"
 		}
 	],
